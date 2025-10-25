@@ -32,7 +32,14 @@ function NavigationButton({ buttonText, ButtonIcon, goToPage }) {
             style={styles.navigationButton}
             onPress={() => navigation.navigate(goToPage)}>
             <View style={styles.leftSection}>
-                {ButtonIcon ? <ButtonIcon color="white" size={40} /> : null}
+                {ButtonIcon ?
+                    <ButtonIcon 
+                    color="white" 
+                    size={40} 
+                    style={styles.iconStyle} 
+                    strokeWidth={3}
+                    />
+                    : null}
                 <Text style={styles.navigationButtonText}>{buttonText}</Text>
             </View>
             <ChevronRight color="white" style={styles.navigationNextIcon} />
@@ -84,4 +91,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         alignItems: "center",
     },
+    iconStyle: {
+        borderWidth: 7,
+        borderBlockColor: 'red'
+    }
 })

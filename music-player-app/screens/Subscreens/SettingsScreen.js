@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function FavouriteScreen() {
+export function SettingsScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Favourite Screen</Text>
+      <Text style={styles.text}>Settings Screen</Text>
     </View>
   );
 }

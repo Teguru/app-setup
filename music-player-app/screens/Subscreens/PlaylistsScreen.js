@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function AllSongsScreen() {
+export function PlaylistsScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>All Songs Screen</Text>
+      <Text style={styles.text}>Playlists Screen</Text>
     </View>
   );
 }

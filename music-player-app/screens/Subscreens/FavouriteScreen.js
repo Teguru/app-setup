@@ -1,10 +1,10 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
 
-export default function PlaylistsScreen() {
+export function FavouriteScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Playlists Screen</Text>
+      <Text style={styles.text}>Favourite Screen</Text>
     </View>
   );
 }
