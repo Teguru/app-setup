@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, Button, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { getMusicFiles } from "../../utils/getMusicFiles";
+import { SongsColumn } from "../../custom_components/SongsColumn";
 
 export function AllSongsScreen() {
   const [allSongs, setAllSongs] = useState([])
@@ -8,31 +9,23 @@ export function AllSongsScreen() {
   useEffect(() => {
     const fetchMusicFiles = async () => {
       const files = await getMusicFiles()
-      console.log(files)
+      // console.log(JSON.stringify(files, null, 2))
       setAllSongs(files)
     }
 
     fetchMusicFiles()
   }, [])
 
-
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>All Songs Screen</Text>
+    <View
+      style={styles.container}>
+      <SongsColumn allSongs={allSongs} />
     </View>
-  );
+  )
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    alignItems: "center",
-    justifyContent: "center",
-  },
-  text: {
-    fontSize: 24,
-    fontWeight: "bold",
-    marginBottom: 16,
-    color: 'white'
-  },
+    flex: 1
+  }
 });

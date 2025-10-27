@@ -33,11 +33,11 @@ function NavigationButton({ buttonText, ButtonIcon, goToPage }) {
             onPress={() => navigation.navigate(goToPage)}>
             <View style={styles.leftSection}>
                 {ButtonIcon ?
-                    <ButtonIcon 
-                    color="white" 
-                    size={40} 
-                    style={styles.iconStyle} 
-                    strokeWidth={3}
+                    <ButtonIcon
+                        color="white"
+                        size={40}
+                        style={styles.iconStyle}
+                        strokeWidth={3}
                     />
                     : null}
                 <Text style={styles.navigationButtonText}>{buttonText}</Text>

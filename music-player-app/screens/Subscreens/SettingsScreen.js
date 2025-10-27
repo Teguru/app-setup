@@ -1,10 +1,15 @@
 import React from "react";
 import { View, Text, Button, StyleSheet } from "react-native";
+import { clearDb } from "../../utils/appDatabase";
 
 export function SettingsScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Settings Screen</Text>
+      <Button
+        title="Clear DB"
+        onPress={() => clearDb()}
+      />
     </View>
   );
 }

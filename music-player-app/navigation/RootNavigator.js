@@ -14,11 +14,12 @@ export function RootNavigator() {
                     },
                     headerTitleStyle: {
                         color: 'white',
-                        fontWeight: "light"
+                        fontWeight: "200"
                     },
                     contentStyle: {
                         backgroundColor: 'black'
-                    }
+                    },
+                    headerTintColor: 'white',
                 }}
                 initialRouteName='Home'>
                 {ROUTES.map(({ name, component, title }) => (
